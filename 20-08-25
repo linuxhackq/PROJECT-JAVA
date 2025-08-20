@@ -1,0 +1,33 @@
+public class Banco {
+
+     String nit;
+     String nombre;
+     String direccion;
+     double recaudo;
+
+    public Banco(String nitBanco, String nombreBanco, String direccionBanco, double recaudoBanco) {
+        nit = nitBanco;
+        nombre = nombreBanco;
+        direccion = direccionBanco;
+        recaudo = recaudoBanco;
+    }
+
+    public void imprimirInformacion() {
+        System.out.println("NIT: " + nit);
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Recaudo: $" + recaudo);
+        System.out.println("---------------------------");
+    }
+
+    public static void main(String[] args) {
+
+        Banco banco1 = new Banco("900123456-7", "Banco Nacional", "Calle 10 #20-30", 1500000.50);
+        Banco banco2 = new Banco("800765432-1", "Banco Popular", "Avenida 5 #15-40", 2500000.75);
+
+
+        System.out.println("Información de los Bancos:");
+        banco1.imprimirInformacion();
+        banco2.imprimirInformacion();
+    }
+}
