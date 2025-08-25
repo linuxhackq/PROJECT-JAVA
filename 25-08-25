@@ -1,0 +1,30 @@
+class Estudiante {
+    private double recaudo;
+    private double prestamo;
+    
+    public Estudiante(double recaudo, double prestamo) {
+        this.recaudo = recaudo;
+        this.prestamo = prestamo;
+    } 
+    
+    public void mostrarDatos() {
+        System.out.println("Recaudo: " + this.recaudo);
+        System.out.println("Prestamo: " + this.prestamo);
+    }
+    
+    public double calcularSaldo() {
+        return this.recaudo - this.prestamo;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Estudiante miEstudiante = new Estudiante(500.0, 300.0);
+        
+        miEstudiante.mostrarDatos();
+        
+        double saldoFinal = miEstudiante.calcularSaldo();
+        
+        System.out.println("El saldo final es: " + saldoFinal);
+    }
+}
